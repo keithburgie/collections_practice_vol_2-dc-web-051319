@@ -65,3 +65,20 @@ def find_cool(data)
   end
   cool_arr
 end
+
+def organize_schools(data)
+  locations = {}
+
+  data.collect do |schools, data| 
+      locations[data[:location]] = []
+  end
+  
+  locations.each do |keys, location_arr|
+      data.each do |school, location| 
+          if location.values.join == keys
+             location_arr << school
+          end
+      end
+  end
+  locations
+end
