@@ -75,9 +75,9 @@ def organize_schools(data)
   
   locations.each do |keys, location_arr|
     data.each do |school, location| 
-        if location.values.join == keys
-           location_arr << school
-        end
+      if location.values.join == keys
+         location_arr << school
+      end
     end
   end
   locations
